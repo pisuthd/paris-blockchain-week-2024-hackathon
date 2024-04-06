@@ -1,5 +1,5 @@
 # USD Silver Surfer
-Our protocol allows users to gain exposure to Real-World Assets (RWAs) through yield-bearing tokens. The first token we introduced is USD Silver Surfer, a yield-bearing token backed by physical silver holdings, offering returns pegged to the US dollar. 
+Our protocol allows users to gain exposure to Real-World Assets (RWAs) powered by Solana blockchain. The first token we introduced is USD Silver Surfer, a yield-bearing token backed by physical silver holdings, offering returns pegged to the US dollar. 
 
 This token is built on Solana's Token Program framework and utilizes several extensions for added functionality, including:
 - Metadata Pointer - This enables SPL tokens to be associated with on-chain metadata.
