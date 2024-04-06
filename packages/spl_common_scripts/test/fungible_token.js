@@ -1,4 +1,4 @@
-const { createMint, getMint, getOrCreateAssociatedTokenAccount, mintTo, getAccount } = require('@solana/spl-token')
+const { createMint, getMint, getOrCreateAssociatedTokenAccount, mintTo, getAccount, transfer } = require('@solana/spl-token')
 const { clusterApiUrl, Connection, Keypair, LAMPORTS_PER_SOL } = require('@solana/web3.js')
 const { HOST_URL } = require("./utils")
 
@@ -34,7 +34,10 @@ describe('#fungible_token', function () {
             LAMPORTS_PER_SOL,
         );
 
-        await connection.confirmTransaction(airdropSignature);
+        await connection.confirmTransaction({
+            signature: airdropSignature,
+            ...(await connection.getLatestBlockhash()),
+        });
 
         expect(1000000000).to.equal(LAMPORTS_PER_SOL)
 
@@ -95,7 +98,25 @@ describe('#fungible_token', function () {
           
           expect(tokenAccountInfo.amount).to.equal(100000000000n)
     })
+    
+    it('Transfering 100 TOKENS', async () => {
+        
+        // Generate a new wallet to receive newly minted token
+        const toWallet = Keypair.generate()
 
-    // TODO: transfer, burn
+        // Get the token account of the toWallet address, and if it does not exist, create it
+        const toTokenAccount = await getOrCreateAssociatedTokenAccount(connection, payer, mint, toWallet.publicKey);
+
+        await transfer(
+            connection,
+            payer,
+            tokenAccount.address,
+            toTokenAccount.address,
+            payer.publicKey,
+            1000000000,
+            []
+        );
+
+    })
 
 })
