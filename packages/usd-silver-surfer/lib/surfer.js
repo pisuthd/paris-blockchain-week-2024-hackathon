@@ -48,7 +48,7 @@ exports.deployToken = async ({
     tokenRate = 32767, // use max value for testing
     // feeBasisPoints = 50, // 0.5%
     // maxFee = 5000,
-    additionalMetadata = [['asset-type', 'silver']]
+    additionalMetadata = [['asset-type', 'silver'], ['country', "South Africa"], ["weight", "10 troy ounces"], ["purity",".999"]]
 }) => {
 
     const transferFeeConfigAuthority = Keypair.generate();
@@ -132,6 +132,27 @@ exports.deployToken = async ({
             programId: TOKEN_2022_PROGRAM_ID,
             field: metadata.additionalMetadata[0][0],
             value: metadata.additionalMetadata[0][1],
+        }),
+        createUpdateFieldInstruction({
+            metadata: mint,
+            updateAuthority: payer.publicKey,
+            programId: TOKEN_2022_PROGRAM_ID,
+            field: metadata.additionalMetadata[1][0],
+            value: metadata.additionalMetadata[1][1],
+        }),
+        createUpdateFieldInstruction({
+            metadata: mint,
+            updateAuthority: payer.publicKey,
+            programId: TOKEN_2022_PROGRAM_ID,
+            field: metadata.additionalMetadata[2][0],
+            value: metadata.additionalMetadata[2][1],
+        }),
+        createUpdateFieldInstruction({
+            metadata: mint,
+            updateAuthority: payer.publicKey,
+            programId: TOKEN_2022_PROGRAM_ID,
+            field: metadata.additionalMetadata[3][0],
+            value: metadata.additionalMetadata[3][1],
         }),
     );
 

@@ -18,6 +18,8 @@ const {
 
 const { deployToken, getAirdrop, HOST_URL } = require("../lib/surfer.js")
 
+const bs58 = require('bs58');
+
 describe('#usd-silver-surfer', function () {
 
     let payer
