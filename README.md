@@ -12,6 +12,8 @@ This token is built on Solana's Token Program framework and utilizes several ext
 
 We have 2 folders, the first `spl-common-scripts` collects all necessary scripts to made up a different type of tokens, while `usd-silver-surfer` is for usd stablecoin with the yield from silver.
 
+We have 2 folders. The `spl-common-scripts` folder contains scripts to test-out common spl features.  The `usd-silver-surfer folder` specifically houses scripts related to the USD-Silver Surfer token, which functions as a USD stablecoin with yield generation derived from silver holdings.
+
 ```
 cd packages/usd-silver-surfer
 ```
