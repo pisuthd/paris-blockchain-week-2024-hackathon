@@ -1,7 +1,7 @@
 {
-    "name": "spl_common_scripts",
+    "name": "usd-silver-surfer",
     "version": "0.0.0",
-    "description": "sctipts to testout core Solana SPL functions",
+    "description": "sctipts to deploy USD Silver Surfer",
     "author": "pisuthd <pisuth.dae@gmail.com>",
     "homepage": "https://github.com/pisuthd/paris-blockchain-week-2024-hackathon#readme",
     "license": "MIT",
