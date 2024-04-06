@@ -18,7 +18,7 @@ We have 2 folders. The `spl-common-scripts` folder contains scripts to test-out 
 cd packages/usd-silver-surfer
 ```
 
-We can then run all tests by:
+We can then run all tests and ensure you have a Solana test validator instance running.
 
 ```
 npm install
