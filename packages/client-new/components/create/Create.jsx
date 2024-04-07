@@ -77,7 +77,7 @@ const TAB = {
   "TRANSFER": "TRANSFER"
 }
 
-const Balances = ({balances }) => {
+const Balances = ({ balances }) => {
 
 
 
@@ -146,6 +146,26 @@ export default function Create() {
         <div className="grid grid-cols-7 gap-5">
           <div className="col-span-4">
             <Charts />
+
+            <h2 className="text-white text-lg font-semibold ">Asset Information</h2>
+            <div className="mt-2 text-white/60">
+              The USD-Silver Surfer is a yield-bearing token designed to function as a USD stablecoin with its yield generation derived from holdings of physical silver.
+
+              Key Features:
+
+              Stablecoin: Aims to maintain a peg of 1 USD-Silver Surfer = 1 USD.
+              Yield-bearing: Generates returns for token holders, potentially through mechanisms like:
+              Lending silver holdings and collecting interest.
+              Investing silver holdings and distributing profits.
+              Solana-based: Built on the Solana blockchain, potentially offering benefits like:
+              Faster transaction speeds and lower fees compared to Ethereum.
+              Potential for additional functionalities through Solana's programmability.
+            </div>
+            <h2 className="text-white mt-4 text-lg font-semibold ">On-chain Information</h2>
+            <a target="_blank" className="text-white/80" href="https://explorer.solana.com/address/581cZHJk44ysyMreY99aB3qZxHybw3sKaxaFGW67NdvR?cluster=devnet">
+            https://explorer.solana.com/address/581cZHJk44ysyMreY99aB3qZxHybw3sKaxaFGW67NdvR?cluster=devnet
+            </a>
+
           </div>
           <div className="col-span-3">
             <div className="mx-auto bg-jacarta-700 p-4 py-8 pt-2 rounded-lg">
@@ -188,6 +208,39 @@ export default function Create() {
                   <Balances
                     balances={balances}
                   />
+
+                  <div className="mt-6 text-white text-sm">
+                    <div className="grid grid-cols-2">
+                      <div>
+                        You will pay
+                      </div>
+                      <div className="text-right">
+                        {amount} USDC
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-2 text-white text-sm">
+                    <div className="grid grid-cols-2">
+                      <div>
+                        You will receive
+                      </div>
+                      <div className="text-right">
+                        {amount} USD-SilverSurfer
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-2 mb-8 text-white text-sm">
+                    <div className="grid grid-cols-2">
+                      <div>
+                        Current APY
+                      </div>
+                      <div className="text-right">
+                        6%
+                      </div>
+                    </div>
+                  </div>
+
+                 
 
                   <div className="mt-4">
                     <button
