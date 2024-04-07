@@ -13,7 +13,6 @@ export default function MintPage() {
       <main>
         <Create />
       </main>
-      <Footer1 />
     </>
   );
 }
