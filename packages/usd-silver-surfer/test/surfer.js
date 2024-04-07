@@ -83,7 +83,7 @@ describe('#usd-silver-surfer', function () {
         
     })
 
-    // TODO: transfer with fees
+    
 
 
 })
