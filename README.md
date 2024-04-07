@@ -25,6 +25,14 @@ npm install
 npm run test
 ```
 
+And we can run the client by access `client` folder and run
+
+```
+npm run dev
+```
+
+Live demo is at https://paris-blockchain-week-2024-hackathon.vercel.app, minting tokens can be done through a script only. 
+
 ## Deployment
 
 Devnet
